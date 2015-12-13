@@ -10,13 +10,8 @@ func echo1(args []string) {
 	fmt.Println("echo1")
 
 	s, sep := "", " "
-<<<<<<< HEAD
 	for _, arg := range args {
 		s += arg + sep
-=======
-	for i := 0; i < len(args); i++ {
-		s += args[i] + sep
->>>>>>> 5044e3a7b2abe28f6b01e5d41bab73c9d033f037
 	}
 	s = s[0 : len(s)-1]
 	fmt.Println(s)
