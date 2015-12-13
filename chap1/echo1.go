@@ -45,7 +45,7 @@ func ex1_2(args []string) {
 func ex1_3(args []string) {
 	fmt.Println("ex1_3")
 	
-	args = append(args, "abcdef", "ghijkl", "mmopqr", "stuvwx", "yz")
+	args = append(args, "abcdef", "ghijkl", "mmopqr", "stuvwx", "yz", "01233456789")
 	
 	t1 := time.Now()
 	echo1(args)
