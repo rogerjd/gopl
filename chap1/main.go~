@@ -11,13 +11,15 @@ func Main(args []string) {
 
 	case "ex1_2":
 		ex1_2(args)
-		
+
 	case "ex1_3":
 		ex1_3(args)
 
 	default:
+<<<<<<< HEAD
+		println("not found: ", excercise)
+=======
 	    println("not found: ", excercise)
+>>>>>>> 5044e3a7b2abe28f6b01e5d41bab73c9d033f037
 	}
-		
-}
 }
