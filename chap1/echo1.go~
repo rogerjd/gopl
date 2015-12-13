@@ -12,8 +12,8 @@ func echo1(args []string) {
 	var s, sep string
 	for i := 0; i < len(args); i++ {
 		s += args[i] + sep
+		sep = " "
 	}
-	s = s[0 : len(s)-1]
 	fmt.Println(s)
 }
 

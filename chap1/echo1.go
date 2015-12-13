@@ -9,12 +9,11 @@ import (
 func echo1(args []string) {
 	fmt.Println("echo1")
 
-	var s, sep string   
-	sep = " "
+	var s, sep string
 	for i := 0; i < len(args); i++ {
-		s += args[i] + sep
+		s += sep + args[i]
+		sep = " "
 	}
-	s = s[0 : len(s)-1]
 	fmt.Println(s)
 }
 
