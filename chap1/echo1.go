@@ -9,9 +9,10 @@ import (
 func echo1(args []string) {
 	fmt.Println("echo1")
 
-	s, sep := "", " "
-	for _, arg := range args {
-		s += arg + sep
+	var s, sep string   
+	sep = " "
+	for i := 0; i < len(args); i++ {
+		s += args[i] + sep
 	}
 	s = s[0 : len(s)-1]
 	fmt.Println(s)
