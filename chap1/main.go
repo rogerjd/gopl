@@ -3,8 +3,12 @@ package chap1
 func Main(args []string) {
 	excercise := args[2]
 	switch excercise {
+
 	case "echo1":
 		echo1(args)
+
+	case "echo2":
+		echo2(args)
 
 	case "ex1_1":
 		ex1_1(args)
@@ -14,6 +18,12 @@ func Main(args []string) {
 
 	case "ex1_3":
 		ex1_3(args)
+
+	case "dup1":
+		dup1()
+
+	case "dup2":
+		dup2()
 
 	default:
 		println("not found: ", excercise)

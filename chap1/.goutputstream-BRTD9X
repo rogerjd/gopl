@@ -3,7 +3,6 @@ package chap1
 func Main(args []string) {
 	excercise := args[2]
 	switch excercise {
-
 	case "echo1":
 		echo1(args)
 
@@ -18,9 +17,6 @@ func Main(args []string) {
 
 	case "ex1_3":
 		ex1_3(args)
-
-	case "dup1":
-		dup1()
 
 	default:
 		println("not found: ", excercise)

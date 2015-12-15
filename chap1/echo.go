@@ -55,6 +55,6 @@ func ex1_3(args []string) {
 	ex1_2(args)
 	n2 := time.Since(t2).Seconds()
 
-	fmt.Printf("Time elapsed: manaual concatenation %f, strings.Join: %f\n",
-		t1-n1, t2-n2)
+	fmt.Printf("Time elapsed: manaual concatenation %e, strings.Join: %e\n",
+		n1, n2)
 }
