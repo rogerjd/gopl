@@ -25,6 +25,9 @@ func dup1() {
 func dup2() {
 	counts := make(map[string]int)
 	files := os.Args[3:]
+	d, _ := os.Getwd()
+	println(d)
+
 	if len(files) == 0 {
 		countLines(os.Stdin, counts)
 	} else {

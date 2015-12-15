@@ -49,7 +49,7 @@ func dup2() {
 	}
 }
 
-//io.Reader should work too
+//io.Reader will work too
 func countLines(f *os.File, counts map[string]int) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
