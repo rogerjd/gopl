@@ -25,6 +25,9 @@ func Main(args []string) {
 	case "dup2":
 		dup2()
 
+	case "dup2_1":
+		dup2_1()
+
 	default:
 		println("not found: ", excercise)
 	}
