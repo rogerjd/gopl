@@ -76,8 +76,9 @@ func dup2_1() {
 	}
 
 	for line, n := range counts {
+		//	    println(line)
 		if n.cnt > 1 {
-			fmt.Printf("%d\t%s\n", n, line)
+			fmt.Printf("%d\t%s\n", n.cnt, line)
 		}
 	}
 }
@@ -103,16 +104,15 @@ func countLines(f *os.File, counts map[string]int) {
 //io.Reader will work too
 func countLines_1(f *os.File, counts map[string]tots) {
 	input := bufio.NewScanner(f)
-
 	for input.Scan() {
 		t, ok := counts[input.Text()]
 		if !ok {
-			t = tots{}
 			t.files = make(map[string]int)
-			counts[input.Text()] = t
 		}
 		t.cnt++
 		t.files[f.Name()]++
+		counts[input.Text()] = t
 	}
+	fmt.Printf("%v", counts)
 	//NOTE: ignoring potential errors from input.Err()
 }
