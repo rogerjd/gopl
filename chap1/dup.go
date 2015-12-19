@@ -7,7 +7,7 @@ import (
 )
 
 //dup1 prints the text of each line that appears more than
-//in the standard input, preceded by its count.
+//once in the standard input, preceded by its count.
 func dup1() {
 	counts := make(map[string]int)
 	input := bufio.NewScanner(os.Stdin)
