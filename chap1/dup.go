@@ -55,7 +55,6 @@ type tots struct {
 }
 
 func dup2_1() {
-
 	counts := make(map[string]tots)
 	files := os.Args[3:]
 	d, _ := os.Getwd()
@@ -78,7 +77,7 @@ func dup2_1() {
 	for line, n := range counts {
 		//	    println(line)
 		if n.cnt > 1 {
-			fmt.Printf("%d\t%s\n", n.cnt, line)
+			fmt.Printf("%d\t%s\t%v\n", n.cnt, line, n.files)
 		}
 	}
 }
@@ -113,6 +112,6 @@ func countLines_1(f *os.File, counts map[string]tots) {
 		t.files[f.Name()]++
 		counts[input.Text()] = t
 	}
-	fmt.Printf("%v", counts)
+//	fmt.Printf("%v\n", counts)
 	//NOTE: ignoring potential errors from input.Err()
 }
