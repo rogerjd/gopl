@@ -77,7 +77,12 @@ func dup2_1() {
 	for line, n := range counts {
 		//	    println(line)
 		if n.cnt > 1 {
-			fmt.Printf("%d\t%s\t%v\n", n.cnt, line, n.files)
+            fmt.Printf("found text, num times:\n")
+			fmt.Printf("\t%s\t%d\t\n", line, n.cnt)
+            fmt.Printf("files:\n")
+			for f, t := range n.files{
+			    fmt.Printf("\t%s\t%d\n", f, t)
+			}
 		}
 	}
 }
