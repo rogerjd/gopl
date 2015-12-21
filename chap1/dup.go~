@@ -77,11 +77,11 @@ func dup2_1() {
 	for line, n := range counts {
 		//	    println(line)
 		if n.cnt > 1 {
-            fmt.Printf("found text, num times:\n")
-			fmt.Printf("\t%d\t%s\t\n", n.cnt, line)
-            fmt.Printf("files:\n")
-			for f, t := range n.files{
-			    fmt.Printf("\t%s\t%d\n", f, t)
+			fmt.Printf("found text, num times:\n")
+			fmt.Printf("\t%s\t%d\t\n", line, n.cnt)
+			fmt.Printf("files:\n")
+			for f, t := range n.files {
+				fmt.Printf("\t%s\t%d\n", f, t)
 			}
 		}
 	}
@@ -117,6 +117,6 @@ func countLines_1(f *os.File, counts map[string]tots) {
 		t.files[f.Name()]++
 		counts[input.Text()] = t
 	}
-//	fmt.Printf("%v\n", counts)
+	//	fmt.Printf("%v\n", counts)
 	//NOTE: ignoring potential errors from input.Err()
 }
