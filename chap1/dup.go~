@@ -75,7 +75,6 @@ func dup2_1() {
 	}
 
 	for line, n := range counts {
-		//	    println(line)
 		if n.cnt > 1 {
 			fmt.Printf("found text, num times:\n")
 			fmt.Printf("\t%s\t%d\t\n", line, n.cnt)

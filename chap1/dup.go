@@ -116,6 +116,5 @@ func countLines_1(f *os.File, counts map[string]tots) {
 		t.files[f.Name()]++
 		counts[input.Text()] = t
 	}
-	//	fmt.Printf("%v\n", counts)
 	//NOTE: ignoring potential errors from input.Err()
 }
