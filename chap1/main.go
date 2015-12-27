@@ -1,5 +1,7 @@
 package chap1
 
+import "os"
+
 func Main(args []string) {
 	excercise := args[2]
 	switch excercise {
@@ -27,6 +29,9 @@ func Main(args []string) {
 
 	case "dup2_1":
 		dup2_1()
+
+	case "lj":
+		lissajous(os.Stdout)
 
 	default:
 		println("not found: ", excercise)
