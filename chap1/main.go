@@ -31,7 +31,8 @@ func Main(args []string) {
 		dup2_1()
 
 	case "lj":
-		lissajous(os.Stdout)
+        f, _ := os.Create("lj.gif")
+		lissajous(f)
 
 	default:
 		println("not found: ", excercise)
