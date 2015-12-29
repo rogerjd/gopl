@@ -31,7 +31,7 @@ func Main(args []string) {
 		dup2_1()
 
 	case "lj":
-        f, _ := os.Create("lj.gif")
+		f, _ := os.Create("lj.gif")
 		lissajous(f)
 
 	default:
