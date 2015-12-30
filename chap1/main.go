@@ -34,6 +34,9 @@ func Main(args []string) {
 		f, _ := os.Create("lj.gif")
 		lissajous(f)
 
+	case "fa":
+		fetchall(args[3:])
+
 	default:
 		println("not found: ", excercise)
 	}
