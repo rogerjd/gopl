@@ -34,7 +34,10 @@ func Main(args []string) {
 		f, _ := os.Create("lj.gif")
 		lissajous(f)
 
-	case "fa":
+	case "fetch":
+		fetch(args[3:])
+
+	case "fetchall":
 		fetchall(args[3:])
 
 	default:
