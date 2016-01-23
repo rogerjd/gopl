@@ -13,7 +13,7 @@ func fetchall(urls []string) {
 	ch := make(chan string)
 
 	for _, url := range urls {
-	    println(url)
+		println(url)
 		go fetchOne(url, ch) // start a goroutine
 	}
 
